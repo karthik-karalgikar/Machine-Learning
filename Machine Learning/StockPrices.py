@@ -157,6 +157,55 @@ NaN for all columns except the last one (Forecast), which gets the predicted pri
 This keeps the data clean: only forecast values are added in this future range, while others stay empty.
 '''
 
+'''
+df.loc[] in a nutshell
+df.loc[] is used to access or modify rows and columns in a pandas DataFrame by label (not position).
+
+Think of df.loc[] like saying:
+“Hey DataFrame, I want to look at or change the row that has this specific label (like a date).”
+
+Example:
+Let's say you have a DataFrame:
+
+import pandas as pd
+data = {
+    'Price': [100, 105, 110],
+    'Volume': [1000, 1100, 1200]
+}
+index = ['2023-01-01', '2023-01-02', '2023-01-03']
+df = pd.DataFrame(data, index=pd.to_datetime(index))
+
+So df looks like:
+            Price  Volume
+2023-01-01    100    1000
+2023-01-02    105    1100
+2023-01-03    110    1200
+
+Now:
+
+df.loc['2023-01-02']
+Will give you:
+
+Price     105
+Volume    1100
+Name: 2023-01-02, dtype: int64
+
+And you can change values too:
+
+df.loc['2023-01-02', 'Price'] = 999
+
+In your loop:
+This line:
+
+df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)] + [pred]
+Means:
+“At the row labeled next_date, set all columns to NaN except the last one ('Forecast') which should be pred.”
+
+If next_date = 2023-01-04, and pred = 11200.0, you are doing:
+
+df.loc['2023-01-04'] = [NaN, NaN, NaN, NaN, 11200.0]
+'''
+
 # Plotting
 fig, ax = plt.subplots(figsize=(12, 6))
 #Creates a figure (fig) and a single subplot (ax) with width 12 and height 6 inches. This is the canvas.
