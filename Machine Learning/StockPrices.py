@@ -80,8 +80,8 @@ Now the model can learn a pattern between X and y.
 
 '''
 X = preprocessing.scale(X)
-X_lately = X[-forecast_out:]
-X = X[:-forecast_out]
+X_lately = X[-forecast_out:] #last 10% of the dataset
+X = X[:-forecast_out] #first 90% of the dataset
 
 
 df.dropna(inplace=True)
