@@ -1,5 +1,5 @@
 #Goal = I have 2 groups, k(black) and r(red). I have a new set of points(new_features) and I have 
-#to predict which group it comes under, based on its k nearest neighbours.
+#to predict which group it comes under, based on its k nearest neighbours. (small dataset)
 
 import numpy as np
 from math import sqrt
