@@ -54,7 +54,7 @@ ys will be something like:
 
 def best_fit_slope_intercept(xs, ys):
     numerator = (mean(xs) * mean(ys)) - mean(xs * ys)
-     denominator = (mean(xs) ** 2) - mean(xs ** 2)
+    denominator = (mean(xs) ** 2) - mean(xs ** 2)
     m = numerator / denominator
 
     b = mean(ys) - m*(mean(xs))

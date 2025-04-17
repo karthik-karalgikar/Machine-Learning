@@ -43,7 +43,7 @@ test_set = {2:[], 4:[]}
 #2 = benign (non-cancerous)
 #4 = malignant (cancerous)
 
-train_data = full_data[:-int(test_size*len(full_data))] #first 20% of the data
+train_data = full_data[:-int(test_size*len(full_data))] #first 80% of the data
 test_data = full_data[-int(test_size*len(full_data)):] #rest
 
 '''
@@ -120,4 +120,33 @@ for group in test_set:
 
 print('Accuracy: ', correct/total)
 
+'''
+Tracing :
+test_set = {2:[1.0, 2.0, 3.0], 4:[]}
+train_set = {2:[[3.0, 2.0, 4.0], [2.0, 3.0, 1.0]], 4:[[6.0, 5.0, 4.0], [7.0, 7.0, 6.0]]}
 
+line 114 -> for loop:
+
+for group in test_set: 
+    this means group 2 in test_set, 
+    data in test_set[2]:
+    this means that [1.0, 2.0, 3.0] is data. 
+    and then we are calling the k_nn function, which caclulates the distance between each of these with train_set:
+    so, the euclidean distance between, 
+    sqrt((3.0-1.0)**2 + (2.0-2.0)**2 + (4.0-3.0)**2) = sqrt(4 + 0 + 1) = sqrt(5) = 2.23
+    distances = [2.23, 2]
+    sqrt((2.0-1.0)**2 + (3.0-2.0)**2 + (1.0-3.0)**2) = sqrt(1 + 1 + 4) = sqrt(6) = 2.44
+    distances = [[2.23, 2], [2.44, 2]]
+    sqrt((6.0-1.0)**2 + (5.0-2.0)**2 + (4.0-3.0)**2) = sqrt(25 + 9 + 1) = sqrt(5) = 5.91
+    distances = [[2.23, 2], [2.44, 2], [5.91, 4]]
+    sqrt((7.0-1.0)**2 + (7.0-2.0)**2 + (6.0-3.0)**2) = sqrt(36 + 25 + 9) = sqrt(5) = 8.36
+    distances = [[2.23, 2], [2.44, 2], [5.91, 4], [8.36, 4]]
+
+    sorted distances = [[2.23, 2], [2.44, 2], [5.91, 4], [8.36, 4]]
+
+    votes = [2, 2, 4, 4][:k]
+    if k = 3
+    votes = [2, 2 ,4]
+
+    Counter = 2
+'''
