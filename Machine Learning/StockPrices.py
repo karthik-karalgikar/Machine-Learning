@@ -16,6 +16,8 @@ df = yf.download("^IXIC", start="2022-01-01", end="2022-12-31", auto_adjust=Fals
 
 df = df[['Adj Close', 'Close', 'High', 'Low', 'Open', 'Volume']]
 
+#comment
+
 '''
 Adj Close: Adjusted closing price (takes into account dividends/splits)
 High and Low: Daily high/low prices
