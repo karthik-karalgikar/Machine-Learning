@@ -1,0 +1,49 @@
+Machine Learning -  
+embrace equations and concepts from at least four major fields of mathematics—
+linear algebra, calculus, probability and statistics, and optimization theory—
+to acquire the minimum theoretical and conceptual knowledge necessary
+
+Example : 
+
+x1 x2 y
+4  2  8
+1  2  5
+0  5  10
+
+“y equals x1 plus two times x2.”
+
+More generally, we can write this as:
+	y = w1x1 + w2x2, where w1 = 1 and w2 = 2
+
+then given some value of x1 and x2 that wasn’t in our initial dataset, 
+we can calculate the value of y. 
+Say, x1 = 5 and x2 = 2. 
+Plug these values into the equation 
+y = x1 + 2x2 and 
+you get a value of y = 9.
+
+What we just did is a simplistic form of something called supervised learning.
+We were given samples of data that had hidden in them some correlation between a set of inputs 
+and a set of outputs. 
+Such data are said to be annotated, or labeled; they are also called the training data.
+
+supervised learning : 
+A way for machines to learn by example.
+You give the machine input data(x1 and x2) and the correct answer(y).
+The machine looks for patterns between the inputs and the outputs.
+Once it learns the pattern, it can make predictions on new inputs it hasn’t seen before.
+
+training data:
+The examples you give to the machine to learn from.
+Each example has:
+Inputs (e.g., x1 = bedrooms, x2 = square footage)
+A label/output (e.g., y = price)
+The machine uses these labeled examples to learn how to predict future outcomes.
+
+Analogy: Learning with a Teacher
+Imagine a kid learning math from a teacher:
+The teacher gives the kid a worksheet with math problems (inputs) and correct answers (labels).
+The kid studies the problems and the answers to understand how to solve them.
+Later, the teacher gives the kid new problems, but without the answers.
+Now the kid uses what they learned from the earlier examples to solve the new problems on their own.
+
