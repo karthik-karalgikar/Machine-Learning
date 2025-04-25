@@ -96,3 +96,4 @@ Also, both i.i and j.j equal 1. All we are left with is a scalar quantity:
 			
 				a.b = a1b1 + a2b2
 
+numpy
