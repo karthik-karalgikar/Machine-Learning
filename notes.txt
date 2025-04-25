@@ -47,3 +47,52 @@ The kid studies the problems and the answers to understand how to solve them.
 Later, the teacher gives the kid new problems, but without the answers.
 Now the kid uses what they learned from the earlier examples to solve the new problems on their own.
 
+Vector:
+A vector has both a length (magnitude) and a direction
+
+i can be thought of as an arrow that points from (0, 0) to (1, 0) and 
+j as an arrow that points from (0, 0) to (0, 1). 
+Each has a magnitude of 1 and is also called a unit vector.
+a unit vector is simply a vector with a magnitude of 1
+
+the vectors (4, 3) and (2, 6), in Cartesian coordinates, 
+can be written as 4i + 3j and 2i + 6j, respectively. 
+That’s the same as saying that the vector (4, 3) is 4 units along the x-axis and 
+3 units along the y-axis and 
+that the vector (2, 6) is 2 units along the x-axis and 6 units along the y-axis.
+
+Dot Product:
+the dot product a.b—read that as “a dot b”— 
+is defined as the magnitude of a multiplied by the projection of b onto a, 
+where the projection can be thought of as the “shadow cast” by one vector onto another.
+
+“The magnitude of a is denoted by |a|
+The projection of b onto a is given by the magnitude of b, or |b|,
+multiplied by the cosine of the angle between the two vectors.
+(But I don't think the cosine is needed)
+
+or, just multiply the consitituents ad add them!!
+
+for example, a = (4,0) and b = (5,5)
+so |a| = sqrt(16 + 0) = 4
+|b| = sqrt(25 + 25) = sqrt(50) = 5.sqrt(2)
+cosine(45) = 1/sqrt(2)
+a.b = 4 * 5.sqrt(2) * 1/sqrt(2) = 20
+
+or, by multiplying the consitituents, we get, 
+4*5 = 20 (x1 * x2)
+0 * 5 = 0 (y1 * y2)
+
+20 + 0 = 20
+
+proof: 
+Say, a = a1i + a2j and b = b1i + b2j. Then:
+			
+a.b = (a1i + a2j).(b1i + b2j) = a1b1 × i.i + a1b2 × i.j + a2b1 × j.i + a2b2 × j.j
+
+Note that the second and third terms in the equation turn out to be zero.
+The vectors i and j are orthogonal, so i.j and j.i are zero. 
+Also, both i.i and j.j equal 1. All we are left with is a scalar quantity:
+			
+				a.b = a1b1 + a2b2
+
