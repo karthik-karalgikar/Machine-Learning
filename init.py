@@ -8,14 +8,20 @@ from sklearn.preprocessing import StandardScaler
 from matplotlib import style
 from perceptron import MyPerceptron
 
-style.use('fivethirtyeight')
+style.use('ggplot')
 
 df = pd.read_csv('breast_cancer_data.csv')
 df.replace('?', -99999, inplace=True)
 df.drop('id', axis=1, inplace=True)
 
 X = df.iloc[:,0:-1].values
+#Selects all rows (:) and all columns except the last one (0:-1) and 
+# .values converts the selected DataFrame part into a NumPy array
 y = df.iloc[:, -1].values
+#Selects all rows (:) and only the last column (-1)
+
+# X = features used for predicting
+# y = features that we are going to predict
 
 y = np.where(y == 2, 0, 1)
 
@@ -30,6 +36,15 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 scalar = StandardScaler()
 X_train = scalar.fit_transform(X_train)
 X_test = scalar.transform(X_test)
+
+'''
+StandardScaler is a tool from scikit-learn that standardizes your data.
+It rescales the features so that:
+The mean (average) of each feature becomes 0
+The standard deviation of each feature becomes 1
+'''
+
+
 
 # print(X_train.shape)
 # print(y_train.shape)

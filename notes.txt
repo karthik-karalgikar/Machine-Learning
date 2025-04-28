@@ -108,3 +108,7 @@ y(y_pred) =
 calculation: 
 w(new) = w(old) + lr(yi - y_pred) * xi
 
+
+Numpy : 
+Low level library, written in C for high level mathematical functions
+Uses multidimensional arrays
