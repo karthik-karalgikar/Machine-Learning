@@ -96,4 +96,15 @@ Also, both i.i and j.j equal 1. All we are left with is a scalar quantity:
 			
 				a.b = a1b1 + a2b2
 
-numpy
+Perceptron:
+
+Sigma = wo(1) + w1x1 + w2x2 + w3x3 + .... + wnxn
+=> g(x) = Sigma(from i = 1 to n) wixi + b
+
+y(y_pred) = 
+            f(g(x)) = -1, if g(x) <= 0 
+                       1, if g(x) > 0
+
+calculation: 
+w(new) = w(old) + lr(yi - y_pred) * xi
+
