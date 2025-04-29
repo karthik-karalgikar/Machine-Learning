@@ -112,3 +112,22 @@ w(new) = w(old) + lr(yi - y_pred) * xi
 Numpy : 
 Low level library, written in C for high level mathematical functions
 Uses multidimensional arrays
+
+Creating numpy arrays:
+
+1. 
+arr1 = np.array([1,2,3,4,5])
+print(arr1)
+
+Output - array([1,2,3,4,5])
+
+type(arr1)
+Output - numpy.ndarray
+
+arr2 = np.array([[1,2,3], [4,5,6]])
+print(arr2)
+
+Output - array([[1,2,3],
+               [4,5,6]])
+
+
