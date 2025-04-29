@@ -1,4 +1,6 @@
 import numpy as np
+import sys
+import time
 
 arr1 = np.array([1,2,3,4,5])
 # print(arr1)
@@ -55,11 +57,56 @@ Numpy attributes and properties
 # (5,)
 
 arr9 = np.array([[[1,2], [2,3]], [[4,5], [5,6]]])
-print(arr9.shape)
+# print(arr9.shape)
 # Output - (2, 2, 2)
 # 2 rows, 2 columns and 2 matrices
 
 # print(arr9.ndim)
 #dimension of the array
 # Output - 3
+
+# print(arr9.size)
+# 8
+
+# print(arr9.itemsize)
+# 8
+
+# print(arr9.dtype)
+# int64, float64, etc
+
+'''
+Why arrays are used in ML instead of lists:
+1. saves space
+2. saves time
+'''
+
+listA = range(100)
+arr10 = np.arange(100)
+
+print(sys.getsizeof(87)*len(listA))
+#2800 bytes
+print(arr10.itemsize*arr10.size)
+#800 bytes
+
+x = range(10000000)
+y = range(10000000, 20000000)
+
+start_time = time.time() #gives current time and storing it in start_time
+c = [(x,y) for x,y in zip(x,y)] #taking one time from each variable and then zipping(adding) them
+
+# print(time.time() - start_time) #duration
+#output - 0.019310951232910156
+
+a = np.arange(10000000)
+b = np.arange(10000000, 20000000)
+
+start_time = time.time() #gives current time and storing it in start_time
+c = a + b
+
+# print(time.time() - start_time)
+# output - 0.006660938262939453
+
+
+
+
 
