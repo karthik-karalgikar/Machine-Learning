@@ -83,9 +83,9 @@ Why arrays are used in ML instead of lists:
 listA = range(100)
 arr10 = np.arange(100)
 
-print(sys.getsizeof(87)*len(listA))
+# print(sys.getsizeof(87)*len(listA))
 #2800 bytes
-print(arr10.itemsize*arr10.size)
+# print(arr10.itemsize*arr10.size)
 #800 bytes
 
 x = range(10000000)
@@ -106,6 +106,14 @@ c = a + b
 # print(time.time() - start_time)
 # output - 0.006660938262939453
 
+arr11 = np.arange(24).reshape(6,4)
+print(arr11)
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]
+#  [12 13 14 15]
+#  [16 17 18 19]
+#  [20 21 22 23]]
 
 
 
