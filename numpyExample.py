@@ -115,6 +115,7 @@ print(arr11)
 #  [16 17 18 19]
 #  [20 21 22 23]]
 
-
+for i in np.nditer(arr11):
+    print(i)
 
 
