@@ -131,3 +131,20 @@ Output - array([[1,2,3],
                [4,5,6]])
 
 
+Machine Learning : Field of study that gives computes the ability to learn without being explicitly
+programmed. -Arthur Samuel
+
+Supervised learning : most used, rapid advancements. 
+this refers to algorithms that learn x to y or input to output mappings. 
+
+Key characteristics is that you give your learning algorithm examples to learn from, that include
+the right answers - "the correct label y for a given input x"
+This ensures that eventually, it takes only the input, without the output, and gives a reasonably 
+correct/accurate answer. 
+
+Regression algorithm - is a type of supervised learning algorithm which learns to predict numbers
+out of infinitely many possible numbers
+
+Second major type - Classification algorithm. 
+Here, the learning algorithm has to make a prediction of a category, all of a small set of possible
+outputs. 
