@@ -107,7 +107,7 @@ c = a + b
 # output - 0.006660938262939453
 
 arr11 = np.arange(24).reshape(6,4)
-print(arr11)
+# print(arr11)
 # [[ 0  1  2  3]
 #  [ 4  5  6  7]
 #  [ 8  9 10 11]
@@ -115,7 +115,9 @@ print(arr11)
 #  [16 17 18 19]
 #  [20 21 22 23]]
 
-for i in np.nditer(arr11):
-    print(i)
+# for i in np.nditer(arr11):
+    # print(i)
 
+arr12 = np.random.random_sample(4)
+print(arr12)
 

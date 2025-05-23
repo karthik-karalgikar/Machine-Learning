@@ -2,18 +2,31 @@ import cv2
 from fer import FER
 
 cap = cv2.VideoCapture(0)
+#capturing video input. If there is only one web cam, then 0. If you want to access the 2nd webcam, 
+# then give the number as 1, 3rd webcam then the number as 2 and so on.
 
 detector = FER(mtcnn=True)
+#FER is a class from fer library - Facial Expression Recognizer
+#mtcnn stands for: Multi-task Cascaded Convolutional Networks — a specialized face detection model.
+#this mtcnn=True means - "Detect faces before recognizing emotions"
+#and mtcnn=True because it is more accurate than the default face detector and detects multiple faces
 
 print("Press 'q' to quit.")
 
 while True:
     ret, frame = cap.read()
+    #Captures one frame from your webcam
+    #ret is True if frame was captured successfully
+    #frame is the image data (a NumPy array of pixels)
     if not ret:
         break
+    #If the camera failed, it exits the loop.
 
     # Detect emotions in the current frame
     results = detector.detect_emotions(frame)
+    #The FER detector scans the frame:
+    #Detects faces
+    #Predicts emotion scores for each face
 
     # Loop through detected faces
     for result in results:
